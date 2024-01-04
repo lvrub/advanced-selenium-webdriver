@@ -17,6 +17,7 @@ public class DropdownPage extends BasePageObject {
 	/** This method selects given option from dropdown */
 	public void selectOption(int i) {
 		log.info("Selecting option " + i + " from dropdown");
+//		dropDownC.selectOptionByValue(i, dropdown);
 		WebElement dropdownElement = find(dropdown);
 		Select dropdown = new Select(dropdownElement);
 

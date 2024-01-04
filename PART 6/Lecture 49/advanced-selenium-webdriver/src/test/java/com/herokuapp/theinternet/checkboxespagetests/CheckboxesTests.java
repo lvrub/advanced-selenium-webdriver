@@ -19,7 +19,7 @@ public class CheckboxesTests extends TestUtilities {
 
 		// Click on Checkboxes link
 		CheckboxesPage checkboxesPage = welcomePage.clickCheckboxesLink();
-
+        sleep(2000);
 		// Select All Checkboxes
 		checkboxesPage.selectAllCheckboxes();
 

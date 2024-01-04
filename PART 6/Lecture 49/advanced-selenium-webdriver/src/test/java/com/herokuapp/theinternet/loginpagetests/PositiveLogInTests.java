@@ -16,11 +16,11 @@ public class PositiveLogInTests extends TestUtilities {
 		// open main page
 		WelcomePage welcomePage = new WelcomePage(driver, log);
 		welcomePage.openPage();
-		takeScreenshot("WelcomePage opened");
+//		takeScreenshot("WelcomePage opened");
 
 		// Click on Form Authentication link
 		LoginPage loginPage = welcomePage.clickFormAuthenticationLink();
-		takeScreenshot("LoginPage opened");
+//		takeScreenshot("LoginPage opened");
 		
 		// Add new cookie
 		Cookie ck = new Cookie("username", "tomsmith", "the-internet.herokuapp.com", "/", null);
@@ -28,7 +28,7 @@ public class PositiveLogInTests extends TestUtilities {
 		
 		// execute log in
 		SecureAreaPage secureAreaPage = loginPage.logIn("tomsmith", "SuperSecretPassword!");
-		takeScreenshot("SecureAreaPage opened");
+//		takeScreenshot("SecureAreaPage opened");
 		
 		// Get cookies
 		String username = secureAreaPage.getCookie("username");

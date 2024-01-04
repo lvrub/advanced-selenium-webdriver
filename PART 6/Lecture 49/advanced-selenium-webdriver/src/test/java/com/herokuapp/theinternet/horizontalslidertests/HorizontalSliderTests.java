@@ -16,7 +16,7 @@ public class HorizontalSliderTests extends TestUtilities {
 		HorizontalSliderPage horizontalSliderPage = new HorizontalSliderPage(driver, log);
 		horizontalSliderPage.openPage();
 
-		String value = "3.5";
+		String value = "5";
 
 		// Set slider value
 		sleep(2000);

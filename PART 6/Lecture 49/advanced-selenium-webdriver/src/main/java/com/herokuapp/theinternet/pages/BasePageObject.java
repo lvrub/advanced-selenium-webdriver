@@ -1,5 +1,6 @@
 package com.herokuapp.theinternet.pages;
 
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -27,6 +28,8 @@ public class BasePageObject {
 		this.driver = driver;
 		this.log = log;
 	}
+	Controls dropDownC = new DropDownControl(this);
+	Controls buttonControl = new ButtonControl(this);
 
 	/** Open page with given URL */
 	protected void openUrl(String url) {
@@ -75,7 +78,7 @@ public class BasePageObject {
 	 */
 	private void waitFor(ExpectedCondition<WebElement> condition, Integer timeOutInSeconds) {
 		timeOutInSeconds = timeOutInSeconds != null ? timeOutInSeconds : 30;
-		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOutInSeconds));
 		wait.until(condition);
 	}
 
@@ -98,7 +101,7 @@ public class BasePageObject {
 
 	/** Wait for alert present and then switch to it */
 	protected Alert switchToAlert() {
-		WebDriverWait wait = new WebDriverWait(driver, 5);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.alertIsPresent());
 		return driver.switchTo().alert();
 	}
