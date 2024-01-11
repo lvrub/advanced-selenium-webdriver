@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="CucumberSuite " verbose="1" parallel="tests" thread-count="2">
+    <test name="Tests CHROME">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="runner.TestRunner"/>
+        </classes>
+    </test>
+    <test name="Tests EDGE">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="runner.TestRunner"/>
+        </classes>
+    </test>
+</suite>
+
+

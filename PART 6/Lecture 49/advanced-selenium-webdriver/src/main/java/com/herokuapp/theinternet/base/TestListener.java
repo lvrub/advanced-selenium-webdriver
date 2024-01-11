@@ -15,7 +15,7 @@ public class TestListener implements ITestListener {
 	@Override
 	public void onTestStart(ITestResult result) {
 		this.testMethodName = result.getMethod().getMethodName();
-		log.info("[Starting " + testMethodName + "]");
+		log.info("[Starting " + testMethodName + result.getMethod().getId()+"]");
 	}
 
 	@Override

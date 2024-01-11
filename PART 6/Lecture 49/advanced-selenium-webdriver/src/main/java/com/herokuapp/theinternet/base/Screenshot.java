@@ -18,10 +18,10 @@ public class Screenshot {
         this.driver = driver;
     }
 
-    protected void takeScreenshot(ITestResult result,ITestContext ctx) {
+    public void takeScreenshot(ITestResult result,ITestContext ctx) {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         String path = System.getProperty("user.dir")
-                + File.separator + "test-output"
+                + File.separator + "target"
                 + File.separator + "screenshots"
                 + File.separator + getTodaysDate()
                 + File.separator + ctx.getSuite().getName()
